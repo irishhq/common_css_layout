@@ -1,0 +1,130 @@
+*, html, body {
+	margin: 0;
+	padding: 0;
+	font: 12px "simhei", Arial, Helvetica, sans-serif;
+}
+/*
+@general
+----------------------*/
+input[type="button"]{
+	width: 130px;
+	height: 40px;
+	color: #fff;
+	border: none;
+	border-radius: 2px;
+	font-size: 16px;
+	background: linear-gradient(to top, #27b1f6 0%, #0aa1ed 100%);
+}
+img:hover{
+	transform: scale(1.1, 1.1);
+}
+img{
+	transition: 1s;
+}
+img, input, h2, h3, h6{
+	cursor: pointer;
+}
+#price, #price span{
+	font-size: 22px;
+	color: #0aa1ed;
+	margin-bottom: 12px;
+}
+
+#details{
+	font-size: 12px;
+    margin-bottom: 24px;
+    color: #666;
+}
+/*end of general
+-------------------------*/
+
+/*@structrue
+--------------------------*/
+.floor-content{
+	width: 1000px;
+	margin: 24px auto;
+}
+.floor-content .row{
+	display: flex;
+	justify-content: space-between;
+}
+
+.row>div{
+	background-color: #e8e8e8;
+	position: relative;
+}
+/*first row*/
+.row1{
+	height: 377px;
+}
+.row1>div:first-child{
+    width: 609px;
+}
+
+.row1>div:nth-child(2){
+    width: 381px;
+}
+.row1 .desc{
+	width: 245px;
+	height: 243px;
+	position: absolute;
+	top: 55px;
+	left: 65px;
+}
+.row1 img{
+	position: absolute;
+	bottom: 20px;
+	right: 30px;
+}
+.row1 h2{
+	font-size: 32px;
+	color: #333;
+}
+/*second row*/
+.row2{
+	height: 233px;
+	margin-top: 10px;
+}
+.row2>div:first-child{
+	width: 377px;
+}
+
+.row2>div:first-child .desc{
+	width: 150px;
+	height: 120px;
+	padding-top: 1em;
+	position: absolute;
+	top: 21px;
+	left: 33px;
+}
+.row2>div:first-child img{
+	position: absolute;
+	right: 17px;
+	top: 40px;
+}
+
+.row2 .product .desc{
+	text-align: center;
+}
+/*end of structrue
+---------------------------*/
+
+/*@override
+---------------------------*/
+.row>div:nth-child(2) .desc{
+	left: 24px;
+}
+
+h3{
+	font-size: 22px;
+}
+.row2 .product .desc input{
+	width: 102px;
+	height: 28px;
+	font-size: 14px;
+}
+
+.row2 .product .desc #price{
+	margin-top: 5px;
+}
+/*end of override*/
