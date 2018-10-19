@@ -24,6 +24,10 @@ img{
 img, input, h2, h3, h6{
 	cursor: pointer;
 }
+h2{
+	font-size: 32px;
+	color: #333;
+}
 #price, #price span{
 	font-size: 22px;
 	color: #0aa1ed;
@@ -43,53 +47,44 @@ img, input, h2, h3, h6{
 .floor-content{
 	width: 1000px;
 	margin: 24px auto;
-}
-.floor-content .row{
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-between;/*两端对齐*/
+	flex-wrap: wrap;/*允许换行*/
 }
 
-.row>div{
+.floor-content>div{
 	background-color: #e8e8e8;
 	position: relative;
+	margin-top: 10px;
 }
-/*first row*/
-.row1{
+.floor-content>div:first-child{
+	width: 609px;
 	height: 377px;
 }
-.row1>div:first-child{
-    width: 609px;
-}
-
-.row1>div:nth-child(2){
+.floor-content>div:nth-child(2){
     width: 381px;
+    height: 377px;
 }
-.row1 .desc{
-	width: 245px;
-	height: 243px;
+.floor-content>div:first-child .desc,
+.floor-content>div:nth-child(2) .desc
+{
 	position: absolute;
 	top: 55px;
-	left: 65px;
+    left: 65px;
+    width: 245px;
+	height: 243px;
 }
-.row1 img{
+.floor-content>div:first-child img,
+.floor-content>div:nth-child(2) img{
 	position: absolute;
 	bottom: 20px;
 	right: 30px;
 }
-.row1 h2{
-	font-size: 32px;
-	color: #333;
-}
-/*second row*/
-.row2{
-	height: 233px;
-	margin-top: 10px;
-}
-.row2>div:first-child{
+.floor-content>div:nth-child(3){
 	width: 377px;
+	height: 233px;
 }
-
-.row2>div:first-child .desc{
+.floor-content>div:nth-child(3) .desc{
 	width: 150px;
 	height: 120px;
 	padding-top: 1em;
@@ -97,13 +92,13 @@ img, input, h2, h3, h6{
 	top: 21px;
 	left: 33px;
 }
-.row2>div:first-child img{
+.floor-content>div:nth-child(3) img{
 	position: absolute;
 	right: 17px;
 	top: 40px;
 }
 
-.row2 .product .desc{
+.floor-content>div.product .desc{
 	text-align: center;
 }
 /*end of structrue
@@ -111,20 +106,21 @@ img, input, h2, h3, h6{
 
 /*@override
 ---------------------------*/
-.row>div:nth-child(2) .desc{
+.floor-content>div:nth-child(2) .desc{
+	width: 253px;
 	left: 24px;
 }
 
 h3{
 	font-size: 22px;
 }
-.row2 .product .desc input{
+.product .desc input{
 	width: 102px;
 	height: 28px;
 	font-size: 14px;
 }
 
-.row2 .product .desc #price{
+.product .desc #price{
 	margin-top: 5px;
 }
 /*end of override*/
